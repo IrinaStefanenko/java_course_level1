@@ -6,7 +6,7 @@ public class Book {
     private double price;
     int discount;
 
-    Book() {
+    public Book() {
         name = "Без название";
     }
 
