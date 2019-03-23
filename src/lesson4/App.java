@@ -14,5 +14,15 @@ public class App {
         ElectronicBook electronicBook = new ElectronicBook();
         System.out.println("Ebook name: " + electronicBook.getFormatteName());
 
+        System.out.println();
+
+        Publication[] object = new Publication[3];
+        object[0] = book;
+        object[1] = publication;
+        object[2] = electronicBook;
+
+        for (int i = 0 ; i < object.length; i++){
+            System.out.println(object[i].getFormatteName());
+        }
     }
 }
