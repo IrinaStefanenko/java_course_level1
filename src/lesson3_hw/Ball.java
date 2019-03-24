@@ -7,7 +7,7 @@ public class Ball {
     private int radius;
     private String color;
 
-     public Ball(){
+    public Ball(){
 
     }
 
@@ -41,6 +41,7 @@ public class Ball {
     public void setColor(String color) {
         this.color = color;
     }
+
     public  void printArrayBalls(Ball[] ball ){
         System.out.println( "Balls");
         for ( int i = 0; i < ball.length; i++) {
@@ -50,9 +51,9 @@ public class Ball {
     }
 
     public  void printBall(Ball ball ){
-            System.out.print("Диаметр " + ball.getDiameter() +
-                    " Радиус " + ball.getRadius() +
-                    " Цвет " + ball.getColor());
+        System.out.print("Диаметр " + ball.getDiameter() +
+                " Радиус " + ball.getRadius() +
+                " Цвет " + ball.getColor());
     }
 
     @Override
@@ -62,6 +63,7 @@ public class Ball {
         Ball other = (Ball) object;
         return  diameter == other.diameter && radius == other.radius && Objects.equals(color, other.color);
     }
+
     @Override
     public  int hashCode(){
         int result =17;
@@ -72,12 +74,12 @@ public class Ball {
         return  result;
     }
 
-   public boolean contains(Ball[] balls, Ball ball){
-       for ( int i = 0; i < balls.length; i++) {
-          if ( balls[i].hashCode() == ball.hashCode() && balls[i].equals(ball)){
-               return true;
-           }
-       }
-       return false;
+    public boolean contains(Ball[] balls, Ball ball){
+        for ( int i = 0; i < balls.length; i++) {
+            if ( balls[i].hashCode() == ball.hashCode() && balls[i].equals(ball)){
+                return true;
+            }
+        }
+        return false;
     }
 }
