@@ -37,7 +37,8 @@ public class App {
         ball[0] = new Ball(6,12, "Зеленый");
         ball[1] = new Ball(1,2, "Зеленый");
         ball[2] = new Ball(3,6, "Голубой");
-        print(ball);
+        Ball resultBall = new Ball();
+        resultBall.printArrayBalls(ball);
 
         int[] array = {4, 4, 9, 5, 78};
         System.out.println("Min value in array " + ArrayUtil.min(array));
@@ -46,13 +47,5 @@ public class App {
 
     }
 
-    private static void print( Ball[] ball ){
-        System.out.println( "Balls");
-        for ( int i = 0; i < ball.length; i++) {
-            System.out.print("Диаметр " + ball[i].getDiameter() +
-                    " Радиус " + ball[i].getRadius() +
-                    " Цвет " + ball[i].getColor());
-            System.out.println();
-        }
-    }
+
 }
