@@ -1,9 +1,9 @@
 package lesson6;
 
 //One way list
-public class List implements Structure {
-    private int size;
+public class List extends AbstractClass {
     private Element head;
+
 
     @Override
     public void add(int value) {
@@ -24,16 +24,6 @@ public class List implements Structure {
             current.setNext(el);
         }
         size++;
-
     }
 
-    @Override
-    public boolean isEmpty() {
-        return false;
-    }
-
-    @Override
-    public int suze() {
-        return 0;
-    }
 }

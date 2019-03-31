@@ -15,6 +15,6 @@ public class App {
         structure.add(18);
         structure.add(18);
         structure.add(19);
-        System.out.println(structure.suze());
+        System.out.println(structure.size());
     }
 }

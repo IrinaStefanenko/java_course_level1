@@ -1,8 +1,7 @@
 package lesson6;
 
-public class DinamicArray implements Structure {
+public class DinamicArray extends AbstractClass  {
     private int[] array;
-    private int size;
 
     public DinamicArray(int initialCapacity){
         if(initialCapacity <= 0){
@@ -10,14 +9,10 @@ public class DinamicArray implements Structure {
         }
         this.array = new int[initialCapacity];
     }
+
     @Override
     public void add(int value) {
         //1. Проверяем есть ли место  куда вставить
-        //2-1.
-        //2-2
-        //      3.
-        //      4.
-
         //Увеличиваем size
         if(array.length == size){
             int[] oldArray  = array;
@@ -27,13 +22,5 @@ public class DinamicArray implements Structure {
         array[size++] = value;
     }
 
-    @Override
-    public boolean isEmpty() {
-        return false;
-    }
 
-    @Override
-    public int suze() {
-        return size;
-    }
 }
